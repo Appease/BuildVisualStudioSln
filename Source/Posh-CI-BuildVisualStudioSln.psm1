@@ -2,8 +2,8 @@
 $ErrorActionPreference = "Stop"
 
 function Invoke-CIStep(
-[string[]][Parameter(Mandatory=$true)]$SlnFilePaths,
-[string][Parameter(Mandatory=$true)]$PathToMsBuildExe){
+[string[]][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$SlnFilePaths,
+[string][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$PathToMsBuildExe){
     
     foreach($slnFilePath in $SlnFilePaths)
     {        
