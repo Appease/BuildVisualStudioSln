@@ -1,7 +1,7 @@
 ###What is it?
 A [Posh-CI](https://github.com/Posh-CI/Posh-CI) step that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
 
-**How do I use it?**
+###How do I install it?
 
 add an entry in your ci plans `Packages.config` file
 ```XML
@@ -11,7 +11,7 @@ add an entry in your ci plans `Packages.config` file
 </packages>
 ```
 
-then just pass variables to Invoke-CIPlan according to the following parameters:
+###What parameters are supported?
 
 #####SlnFilePaths Parameter
 explicit paths to .sln files you want build; defaults is all .sln files within your project root dir @ any depth
