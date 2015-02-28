@@ -5,7 +5,7 @@ A [Posh-CI](https://github.com/Posh-CI/Posh-CI) step that builds one or more [Vi
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "Posh-CI-RestoreNuGetPackages"
+Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "Posh-CI-BuildVisualStudioSln"
 ```
 
 ####What parameters are available?
