@@ -1,24 +1,41 @@
 ####What is it?
 
-A [Posh-CI](https://github.com/Posh-CI/Posh-CI) step that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
+A [PoshCI](https://github.com/PoshCI/PoshCI) step that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
 
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "Posh-CI-BuildVisualStudioSln"
+Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "BuildVisualStudioSln"
 ```
 
 ####What parameters are available?
 
-#####SlnFilePaths
-explicit paths to .sln files you want build; defaults is all .sln files within your project root dir @ any depth
+#####IncludeSlnFilePath
+A String[] representing included .sln file paths. Either literal or wildcard paths are allowed; Default is all .sln files within the project root dir @ any depth
 ```PowerShell
-[string[]][Parameter(ValueFromPipelineByPropertyName=$true)]$SlnFilePaths
+[String[]]
+[Parameter(
+    ValueFromPipelineByPropertyName=$true)]
+$IncludeSlnFilePath
 ```
+
+#####Recurse
+a Switch representing whether to include .sln files located in sub directories of $IncludeSlnFilePath (at any depth)
+```PowerShell
+[Switch]
+[Parameter(
+    ValueFromPipelineByPropertyName=$true)]
+$Recurse
+```
+
 #####PathToMsBuildExe
 path to msbuild.exe on your machine
 ```PowerShell
-[string][Parameter(Mandatory=$true,ValueFromPipelineByPropertyName=$true)]$PathToMsBuildExe
+[String]
+[Parameter(
+    Mandatory=$true,
+    ValueFromPipelineByPropertyName=$true)]
+$PathToMsBuildExe
 ```
 
 ####What's the build status?
