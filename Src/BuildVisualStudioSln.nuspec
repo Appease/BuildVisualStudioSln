@@ -12,6 +12,6 @@
 		<projectUrl>https://github.com/PoshCI/BuildVisualStudioSln</projectUrl>
 	</metadata>	
 	<files>
-		<file src="**" target="tools\CreateNuGetPackage" exclude="**\.nuspec"/>
+		<file src="**" target="tools\BuildVisualStudioSln" exclude="**\.nuspec"/>
 	</files>
 </package>
