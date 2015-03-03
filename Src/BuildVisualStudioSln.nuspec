@@ -6,7 +6,7 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A Posh-CI step that builds one or more Visual Studio solutions
+			A PoshCI step that builds one or more Visual Studio solutions
 		</description>
 		<tags>Powershell PoshCI Build VisualStudioSln</tags>
 		<projectUrl>https://github.com/PoshCI/BuildVisualStudioSln</projectUrl>
