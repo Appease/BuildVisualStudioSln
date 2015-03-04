@@ -34,7 +34,7 @@ $PathToMsBuildExe){
     }
     else{
         
-        $SlnAndOrConfigFilePath += gci -File -Path $IncludeSlnFilePath -Recurse:$Recurse -Filter "*.sln" | %{$_.FullName}
+        $SlnFilePaths += gci -File -Path $IncludeSlnFilePath -Recurse:$Recurse -Filter "*.sln" | %{$_.FullName}
                
     }
 
