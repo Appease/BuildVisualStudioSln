@@ -14,9 +14,10 @@ Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "BuildVisualStudioSln"
 A String[] representing included .sln file paths. Either literal or wildcard paths are allowed; Default is all .sln files within the project root dir @ any depth
 ```PowerShell
 [String[]]
+[ValidateCount(1,[Int]::MaxValue)]
 [Parameter(
     ValueFromPipelineByPropertyName=$true)]
-$IncludeSlnFilePath
+$IncludeSlnFilePath = @(gci -Path $PoshCIProjectRootDirPath  -File -Recurse -Filter '*.sln'|%{$_.FullName})
 ```
 
 #####Recurse

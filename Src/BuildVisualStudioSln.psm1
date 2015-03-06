@@ -11,9 +11,15 @@ function Invoke-CIStep(
 $PoshCIProjectRootDirPath,
 
 [String[]]
+[ValidateCount(1,[Int]::MaxValue)]
 [Parameter(
     ValueFromPipelineByPropertyName=$true)]
-$IncludeSlnFilePath,
+$IncludeSlnFilePath = @(gci -Path $PoshCIProjectRootDirPath  -File -Recurse -Filter '*.sln'|%{$_.FullName}),
+
+[String[]]
+[Parameter(
+    ValueFromPipelineByPropertyName = $true)]
+$ExcludeSlnNameLike,
 
 [Switch]
 [Parameter(
@@ -25,18 +31,8 @@ $Recurse,
 [Parameter(
     ValueFromPipelineByPropertyName=$true)]
 $PathToMsBuildExe = 'C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe'){
-    
-    # default to recursively picking up any .sln files below the project root directory path
-    if(!$IncludeSlnFilePath){
-
-        $SlnFilePaths = gci -Path $PoshCIProjectRootDirPath  -File -Recurse -Filter '*.sln' | %{$_.FullName}
-    
-    }
-    else{
-        
-        $SlnFilePaths += gci -File -Path $IncludeSlnFilePath -Recurse:$Recurse -Filter "*.sln" | %{$_.FullName}
-               
-    }
+           
+    $SlnFilePaths = @(gci -Path $IncludeSlnFilePath -File -Exclude $ExcludeSlnNameLike -Recurse:$Recurse -Filter "*.sln" | %{$_.FullName})
 
     foreach($slnFilePath in $SlnFilePaths)
     {        
