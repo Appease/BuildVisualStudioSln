@@ -5,7 +5,7 @@ A [PoshCI](https://github.com/PoshCI/PoshCI) step that builds one or more [Visua
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -ModulePackageId "BuildVisualStudioSln"
+Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "BuildVisualStudioSln"
 ```
 
 ####What parameters are available?
