@@ -22,9 +22,8 @@ $Recurse,
 
 [String]
 [Parameter(
-    Mandatory=$true,
     ValueFromPipelineByPropertyName=$true)]
-$PathToMsBuildExe){
+$PathToMsBuildExe = 'C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe'){
     
     # default to recursively picking up any .sln files below the project root directory path
     if(!$IncludeSlnFilePath){
