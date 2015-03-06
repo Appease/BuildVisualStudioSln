@@ -33,9 +33,8 @@ A String representing the path to msbuild.exe on your machine
 ```PowerShell
 [String]
 [Parameter(
-    Mandatory=$true,
     ValueFromPipelineByPropertyName=$true)]
-$PathToMsBuildExe
+$PathToMsBuildExe = 'C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe'
 ```
 
 ####What's the build status?
