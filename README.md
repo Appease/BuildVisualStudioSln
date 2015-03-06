@@ -32,6 +32,7 @@ $Recurse
 A String representing the path to msbuild.exe on your machine
 ```PowerShell
 [String]
+[ValidateNotNullOrEmpty()]
 [Parameter(
     ValueFromPipelineByPropertyName=$true)]
 $PathToMsBuildExe = 'C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe'
