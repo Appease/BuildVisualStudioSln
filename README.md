@@ -20,7 +20,7 @@ $IncludeSlnFilePath
 ```
 
 #####Recurse
-a Switch representing whether to include .sln files located in sub directories of $IncludeSlnFilePath (at any depth)
+A Switch representing whether to include .sln files located in sub directories of $IncludeSlnFilePath (at any depth)
 ```PowerShell
 [Switch]
 [Parameter(
@@ -29,7 +29,7 @@ $Recurse
 ```
 
 #####PathToMsBuildExe
-path to msbuild.exe on your machine
+A String representing the path to msbuild.exe on your machine
 ```PowerShell
 [String]
 [Parameter(
