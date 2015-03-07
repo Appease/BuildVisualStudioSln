@@ -11,7 +11,7 @@ Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "BuildVisualStudioSln"
 ####What parameters are available?
 
 #####IncludeSlnFilePath
-A String[] representing included .sln file paths. Either literal or wildcard paths are allowed; Default is all .sln files within the project root dir @ any depth
+A String[] representing included .sln file paths. Either literal or wildcard paths are allowed; default is all .sln files within the project root dir @ any depth
 ```PowerShell
 [String[]]
 [ValidateCount(1,[Int]::MaxValue)]
