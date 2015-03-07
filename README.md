@@ -22,10 +22,12 @@ $IncludeSlnFilePath = @(gci -Path $PoshCIProjectRootDirPath  -File -Recurse -Fil
 
 #####ExcludeSlnFilePath
 A String[] representing .sln file names to exclude. Either literal or wildcard names are supported.
+```PowerShell
 [String[]]
 [Parameter(
     ValueFromPipelineByPropertyName = $true)]
-$ExcludeSlnFilePath,
+$ExcludeSlnFilePath
+```
 
 #####Recurse
 A Switch representing whether to include .sln files located in sub directories of $IncludeSlnFilePath (at any depth)
