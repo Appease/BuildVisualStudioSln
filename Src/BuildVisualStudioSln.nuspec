@@ -6,10 +6,10 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A PoshCI step that builds one or more Visual Studio solutions
+			A PoshDevOps task that builds one or more Visual Studio solutions
 		</description>
-		<tags>Powershell PoshCI Build VisualStudioSln</tags>
-		<projectUrl>https://github.com/PoshCI/BuildVisualStudioSln</projectUrl>
+		<tags>Powershell PoshDevOps Build VisualStudioSln</tags>
+		<projectUrl>https://github.com/PoshDevOps/BuildVisualStudioSln</projectUrl>
 	</metadata>	
 	<files>
 		<file src="**" target="tools\BuildVisualStudioSln" exclude="**\.nuspec"/>

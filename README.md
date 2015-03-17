@@ -1,11 +1,11 @@
 ####What is it?
 
-A [PoshCI](https://github.com/PoshCI/PoshCI) step that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
+A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) step that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
 
 ####How do I install it?
 
 ```PowerShell
-Add-CIStep -Name "YOUR-CISTEP-NAME" -PackageId "BuildVisualStudioSln"
+Add-PoshDevOpsTask -Name "YOUR-CISTEP-NAME" -PackageId "BuildVisualStudioSln"
 ```
 
 ####What parameters are available?
@@ -17,7 +17,7 @@ A String[] representing included .sln file paths. Either literal or wildcard pat
 [ValidateCount(1,[Int]::MaxValue)]
 [Parameter(
     ValueFromPipelineByPropertyName=$true)]
-$IncludeSlnFilePath = @(gci -Path $PoshCIProjectRootDirPath  -File -Recurse -Filter '*.sln'|%{$_.FullName})
+$IncludeSlnFilePath = @(gci -Path $PoshDevOpsProjectRootDirPath  -File -Recurse -Filter '*.sln'|%{$_.FullName})
 ```
 
 #####ExcludeSlnFilePath
