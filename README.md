@@ -49,4 +49,4 @@ $PathToMsBuildExe = 'C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe'
 ```
 
 ####What's the build status?
-![](https://ci.appveyor.com/api/projects/status/9tp100rf05jd7mcy?svg=true)
+![](https://ci.appveyor.com/api/projects/status/87mbd9q9psmvny4q?svg=true)
