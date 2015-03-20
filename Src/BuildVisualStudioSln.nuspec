@@ -6,7 +6,7 @@
 		<authors>Chris Dostert</authors>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
-			A PoshDevOps task that builds one or more Visual Studio solutions
+			A Poshtask that builds one or more Visual Studio solutions
 		</description>
 		<tags>Powershell PoshDevOps Build VisualStudioSln</tags>
 		<projectUrl>https://github.com/PoshDevOps/BuildVisualStudioSln</projectUrl>

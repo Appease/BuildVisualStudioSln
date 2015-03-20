@@ -1,6 +1,6 @@
 ####What is it?
 
-A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) step that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
+A [PoshDevOps](https://github.com/PoshDevOps/PoshDevOps) task that builds one or more [Visual Studio](http://www.visualstudio.com) solutions
 
 ####How do I install it?
 
