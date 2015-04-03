@@ -1,20 +1,20 @@
 # halt immediately on any errors which occur in this module
 $ErrorActionPreference = "Stop"
 
-function Invoke-PoshDevOpsTask(
+function Invoke(
 
 [String]
 [ValidateNotNullOrEmpty()]
 [Parameter(
     Mandatory=$true,
     ValueFromPipelineByPropertyName=$true)]
-$PoshDevOpsProjectRootDirPath,
+$AppeaseProjectRootDirPath,
 
 [String[]]
 [ValidateCount(1,[Int]::MaxValue)]
 [Parameter(
     ValueFromPipelineByPropertyName=$true)]
-$IncludeSlnFilePath = @(gci -Path $PoshDevOpsProjectRootDirPath  -File -Recurse -Filter '*.sln'|%{$_.FullName}),
+$IncludeSlnFilePath = @(gci -Path $AppeaseProjectRootDirPath  -File -Recurse -Filter '*.sln'|%{$_.FullName}),
 
 [String[]]
 [Parameter(
@@ -47,4 +47,4 @@ $PathToMsBuildExe = 'C:\Program Files (x86)\MSBuild\14.0\Bin\MSBuild.exe'){
 
 }
 
-Export-ModuleMember -Function Invoke-PoshDevOpsTask
+Export-ModuleMember -Function Invoke

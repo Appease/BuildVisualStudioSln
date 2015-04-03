@@ -1,0 +1,31 @@
+{
+    "Name":  "Publish",
+    "Tasks":  [
+                  {
+                      "TemplateId":  "PublishAppeaseTaskTemplate",
+                      "Name":  "Publish to official Appease feed",
+                      "TemplateVersion":  "0.0.12",
+                      "Parameters":  {
+                                         "ProjectUrl":  "https://github.com/Appease/BuildVisualStudioSln",
+                                         "Id":  "BuildVisualStudioSln",
+                                         "IconUrl":  "http://res.cloudinary.com/hibczhd9m/image/upload/c_crop,w_350/v1423785217/NuGet.org/5711875.png",
+                                         "Description":  "Builds one or more Visual Studio solutions",
+                                         "Dependencies":  {
+                                                              "Chocolatey":  [
+                                                                                 {
+                                                                                     "Id":  "Chocolatey",
+                                                                                     "Version":  "0.9.9.4"
+                                                                                 }
+                                                                             ]
+                                                          },
+                                         "Contributor":  {
+                                                             "Name":  "Chris Dostert"
+                                                         },
+                                         "File":  {
+                                                      "Include":  "Src\\BuildVisualStudioSln.psm1",
+                                                      "Destination":  "BuildVisualStudioSln"
+                                                  }
+                                     }
+                  }
+              ]
+}
