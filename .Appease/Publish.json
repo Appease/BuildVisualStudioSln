@@ -10,14 +10,6 @@
                                          "Id":  "BuildVisualStudioSln",
                                          "IconUrl":  "http://res.cloudinary.com/hibczhd9m/image/upload/c_crop,w_350/v1423785217/NuGet.org/5711875.png",
                                          "Description":  "Builds one or more Visual Studio solutions",
-                                         "Dependencies":  {
-                                                              "Chocolatey":  [
-                                                                                 {
-                                                                                     "Id":  "Chocolatey",
-                                                                                     "Version":  "0.9.9.4"
-                                                                                 }
-                                                                             ]
-                                                          },
                                          "Contributor":  {
                                                              "Name":  "Chris Dostert"
                                                          },
